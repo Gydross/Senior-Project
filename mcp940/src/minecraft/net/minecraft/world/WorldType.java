@@ -19,6 +19,9 @@ public class WorldType
     public static final WorldType CUSTOMIZED = new WorldType(4, "customized");
     public static final WorldType DEBUG_WORLD = new WorldType(5, "debug_all_block_states");
 
+    /** banded climate world type */
+    public static final WorldType CLIMATEZONE = (new WorldType(6, "climateZones"));
+    
     /** Default (1.1) world type. */
     public static final WorldType DEFAULT_1_1 = (new WorldType(8, "default_1_1", 0)).setCanBeCreated(false);
 

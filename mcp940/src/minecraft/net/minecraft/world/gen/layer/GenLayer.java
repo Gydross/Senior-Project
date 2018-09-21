@@ -164,30 +164,47 @@ public abstract class GenLayer
      */
     public abstract int[] getInts(int areaX, int areaY, int areaWidth, int areaHeight);
 
+    /**
+     * Determines whether biomes are identical, or some variant of a Mesa biome.
+     * @param biomeIDA: The first biome
+     * @param biomeIDB: The second biome
+     * @return True if identical, true if both are a Mesa biome, false if the biomes meet neither criteria
+     *   or simply don't exist.
+     *   
+     * @documented Aaron Wink
+     */
     protected static boolean biomesEqualOrMesaPlateau(int biomeIDA, int biomeIDB)
     {
+        // If the biomes share the same ID, they can border each other.
         if (biomeIDA == biomeIDB)
         {
             return true;
         }
         else
         {
+            // Otherwise, obtain the biomes associated with each ID passed into the method.
             Biome biome = Biome.getBiome(biomeIDA);
             Biome biome1 = Biome.getBiome(biomeIDB);
 
+            // If the biomes at least exist...
             if (biome != null && biome1 != null)
             {
+                // ...and if the first biome is NOT MESA_ROCK or MESA_CLEAR_ROCK...
                 if (biome != Biomes.MESA_ROCK && biome != Biomes.MESA_CLEAR_ROCK)
                 {
+                    // ...then check to see if either the biomes are identical, or if they share the same class in the project.
                     return biome == biome1 || biome.getBiomeClass() == biome1.getBiomeClass();
                 }
                 else
                 {
+                    // If the first biome, however, IS either of the MESA-type biomes, then check to see whether or not the
+                    //   second biome is as well.
                     return biome1 == Biomes.MESA_ROCK || biome1 == Biomes.MESA_CLEAR_ROCK;
                 }
             }
             else
             {
+                // Otherwise, since the biomes do not exist, return false.
                 return false;
             }
         }

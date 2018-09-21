@@ -394,15 +394,27 @@ public abstract class Biome
         return this.getClass();
     }
 
+    /**
+     * Returns the climate zone (or "temperature category") each biome is classified as, 
+     *   based on its temperature value.
+     *   
+     *   @modified Aaron Wink
+     *     Added a condition to handle the SUBTROPICAL climate zone.
+     * @return The temperature category a given biome falls into.
+     */
     public Biome.TempCategory getTempCategory()
     {
         if ((double)this.getTemperature() < 0.2D)
         {
-            return Biome.TempCategory.COLD;
+            return Biome.TempCategory.POLAR;
+        }
+        else if ((double)this.getTemperature() >= 2.0D)
+        {
+            return Biome.TempCategory.SUBTROPICAL;
         }
         else
         {
-            return (double)this.getTemperature() < 1.0D ? Biome.TempCategory.MEDIUM : Biome.TempCategory.WARM;
+            return (double)this.getTemperature() < 1.0D ? Biome.TempCategory.TEMPERATE : Biome.TempCategory.TROPICAL;
         }
     }
 
@@ -644,13 +656,20 @@ public abstract class Biome
     }
 
     /**
-     * @noteToSelf Maybe this is important... could be used to establish climate zones? :thinking:
+     * Enumerates climate zones. OCEAN is left in for support purposes; however, the others have been renamed.
+     *   COLD has become POLAR.
+     *   MEDIUM has become TEMPERATE.
+     *   WARM has become TROPICAL.
+     *   SUBTROPICAL was added to the list.
+     *   
+     *   @modified Aaron Wink
      */
     public static enum TempCategory
     {
         OCEAN,
-        COLD,
-        MEDIUM,
-        WARM;
+        POLAR,
+        TEMPERATE,
+        TROPICAL,
+        SUBTROPICAL;
     }
 }

@@ -140,15 +140,20 @@ public class GenLayerBiomeEdge extends GenLayer
     /**
      * Returns if two biomes can logically be neighbors. If one is hot and the other cold, for example, it returns
      * false.
+     * 
+     * @modified Aaron Wink
      */
     private boolean canBiomesBeNeighbors(int p_151634_1_, int p_151634_2_)
     {
+        // Runs a preliminary check to see if the biomes are identical, or some variant of Mesa biome.
+        //   Returns true if either of these conditions are met.
         if (biomesEqualOrMesaPlateau(p_151634_1_, p_151634_2_))
         {
             return true;
         }
         else
         {
+            // If not...
             Biome biome = Biome.getBiome(p_151634_1_);
             Biome biome1 = Biome.getBiome(p_151634_2_);
 
@@ -156,7 +161,15 @@ public class GenLayerBiomeEdge extends GenLayer
             {
                 Biome.TempCategory biome$tempcategory = biome.getTempCategory();
                 Biome.TempCategory biome$tempcategory1 = biome1.getTempCategory();
-                return biome$tempcategory == biome$tempcategory1 || biome$tempcategory == Biome.TempCategory.MEDIUM || biome$tempcategory1 == Biome.TempCategory.MEDIUM;
+                
+                // If the biomes have the same temperature category (climate zone),
+                //   or either of the biomes are temperate,
+                //   or the first biome is temperate and the second is either subtropical or tropical,
+                //   or the two biomes are subtropical and/or tropical...
+                //   return true.
+                return biome$tempcategory == biome$tempcategory1 
+                        || (biome$tempcategory == Biome.TempCategory.TEMPERATE || biome$tempcategory1 == Biome.TempCategory.POLAR) 
+                        || ((biome$tempcategory == Biome.TempCategory.SUBTROPICAL || biome$tempcategory1 == Biome.TempCategory.TROPICAL) && (biome$tempcategory1 == Biome.TempCategory.SUBTROPICAL || biome$tempcategory1 == Biome.TempCategory.TROPICAL));
             }
             else
             {
