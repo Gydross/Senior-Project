@@ -1,0 +1,10 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "desert_hills": "2018-10-08 18:51:50 -0400",
+      "mesa": "2018-10-08 18:52:06 -0400",
+      "savanna": "2018-10-08 18:51:28 -0400"
+    },
+    "done": false
+  }
+}

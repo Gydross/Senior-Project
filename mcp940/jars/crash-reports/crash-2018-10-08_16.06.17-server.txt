@@ -1,0 +1,87 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 10/8/18 4:06 PM
+Description: Exception initializing level
+
+java.lang.NullPointerException: Exception initializing level
+	at net.minecraft.world.gen.layer.GenLayerBiome.getInts(GenLayerBiome.java:89)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerBiomeEdge.getInts(GenLayerBiomeEdge.java:20)
+	at net.minecraft.world.gen.layer.GenLayerHills.getInts(GenLayerHills.java:26)
+	at net.minecraft.world.gen.layer.GenLayerRareBiome.getInts(GenLayerRareBiome.java:20)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerAddIsland.getInts(GenLayerAddIsland.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerShore.getInts(GenLayerShore.java:22)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerSmooth.getInts(GenLayerSmooth.java:21)
+	at net.minecraft.world.gen.layer.GenLayerRiverMix.getInts(GenLayerRiverMix.java:35)
+	at net.minecraft.world.biome.BiomeProvider.findBiomePosition(BiomeProvider.java:208)
+	at net.minecraft.world.WorldServer.createSpawnPosition(WorldServer.java:948)
+	at net.minecraft.world.WorldServer.initialize(WorldServer.java:885)
+	at net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:110)
+	at net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:143)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.world.gen.layer.GenLayerBiome.getInts(GenLayerBiome.java:89)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerBiomeEdge.getInts(GenLayerBiomeEdge.java:20)
+	at net.minecraft.world.gen.layer.GenLayerHills.getInts(GenLayerHills.java:26)
+	at net.minecraft.world.gen.layer.GenLayerRareBiome.getInts(GenLayerRareBiome.java:20)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerAddIsland.getInts(GenLayerAddIsland.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerShore.getInts(GenLayerShore.java:22)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerZoom.getInts(GenLayerZoom.java:21)
+	at net.minecraft.world.gen.layer.GenLayerSmooth.getInts(GenLayerSmooth.java:21)
+	at net.minecraft.world.gen.layer.GenLayerRiverMix.getInts(GenLayerRiverMix.java:35)
+	at net.minecraft.world.biome.BiomeProvider.findBiomePosition(BiomeProvider.java:208)
+	at net.minecraft.world.WorldServer.createSpawnPosition(WorldServer.java:948)
+
+-- Affected level --
+Details:
+	Level name: test_05
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 0 Drop: 0
+	Level seed: -2147286492754552887
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.world.WorldServer.initialize(WorldServer.java:885)
+	at net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:110)
+	at net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:143)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 3977808976 bytes (3793 MB) / 4116185088 bytes (3925 MB) up to 4116185088 bytes (3925 MB)
+	JVM Flags: 2 total; -Xmx4G -Xms4G
+	IntCache: cache: 0, tcache: 0, allocated: 4, tallocated: 19
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

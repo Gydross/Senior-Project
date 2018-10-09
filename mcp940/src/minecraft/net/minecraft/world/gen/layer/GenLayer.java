@@ -128,6 +128,7 @@ public abstract class GenLayer
     /**
      * Initialize layer's current chunkSeed based on the local worldGenSeed and the (x,z) chunk coordinates.
      */
+    // WHAT THE FUCK IS THIS????
     public void initChunkSeed(long p_75903_1_, long p_75903_3_)
     {
         this.chunkSeed = this.worldGenSeed;

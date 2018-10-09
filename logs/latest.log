@@ -1,0 +1,99 @@
+[15:39:28] [Client thread/ERROR]: Can't find the resource index file: assets\indexes\1.8.json
+[15:39:28] [Client thread/INFO]: Setting user: Player266
+[15:39:29] [Client thread/INFO]: [STDERR]: java.lang.Error: Unresolved compilation problems: 
+	field_150364_r cannot be resolved or is not a field
+	field_176301_b cannot be resolved or is not a field
+	field_150362_t cannot be resolved or is not a field
+	field_176239_P cannot be resolved or is not a field
+	field_176236_b cannot be resolved or is not a field
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177958_n() is undefined for the type BlockPos
+	The method func_177958_n() is undefined for the type BlockPos
+	The method func_177952_p() is undefined for the type BlockPos
+	The method func_177952_p() is undefined for the type BlockPos
+	The method func_181079_c(int, int, int) is undefined for the type BlockPos.MutableBlockPos
+	The method func_177977_b() is undefined for the type BlockPos
+	field_150349_c cannot be resolved or is not a field
+	field_150346_d cannot be resolved or is not a field
+	field_150458_ak cannot be resolved or is not a field
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177977_b() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177958_n() is undefined for the type BlockPos
+	The method func_177958_n() is undefined for the type BlockPos
+	The method func_177958_n() is undefined for the type BlockPos
+	The method func_177952_p() is undefined for the type BlockPos
+	The method func_177952_p() is undefined for the type BlockPos
+	The method func_177952_p() is undefined for the type BlockPos
+	The method func_180495_p(BlockPos) is undefined for the type World
+	field_151579_a cannot be resolved or is not a field
+	field_151584_j cannot be resolved or is not a field
+	field_151582_l cannot be resolved or is not a field
+	The method func_177981_b(int) is undefined for the type BlockPos
+	field_151579_a cannot be resolved or is not a field
+	field_151584_j cannot be resolved or is not a field
+	field_151582_l cannot be resolved or is not a field
+	The method func_177981_b(int) is undefined for the type BlockPos
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	field_176278_M cannot be resolved or is not a field
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	field_176280_O cannot be resolved or is not a field
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	field_176279_N cannot be resolved or is not a field
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	The method func_177982_a(int, int, int) is undefined for the type BlockPos
+	field_176273_b cannot be resolved or is not a field
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177956_o() is undefined for the type BlockPos
+	The method func_177958_n() is undefined for the type BlockPos
+	The method func_177958_n() is undefined for the type BlockPos
+	The method func_177952_p() is undefined for the type BlockPos
+	The method func_177952_p() is undefined for the type BlockPos
+	The method func_181079_c(int, int, int) is undefined for the type BlockPos.MutableBlockPos
+	The method func_180495_p(BlockPos.MutableBlockPos) is undefined for the type World
+	field_151584_j cannot be resolved or is not a field
+	The method func_177976_e() is undefined for the type BlockPos.MutableBlockPos
+	The method func_177974_f() is undefined for the type BlockPos.MutableBlockPos
+	The method func_177978_c() is undefined for the type BlockPos.MutableBlockPos
+	The method func_177968_d() is undefined for the type BlockPos.MutableBlockPos
+	The method func_180495_p(BlockPos) is undefined for the type World
+	field_151579_a cannot be resolved or is not a field
+	field_176278_M cannot be resolved or is not a field
+	The method func_180495_p(BlockPos) is undefined for the type World
+	field_151579_a cannot be resolved or is not a field
+	field_176280_O cannot be resolved or is not a field
+	The method func_180495_p(BlockPos) is undefined for the type World
+	field_151579_a cannot be resolved or is not a field
+	field_176279_N cannot be resolved or is not a field
+	The method func_180495_p(BlockPos) is undefined for the type World
+	field_151579_a cannot be resolved or is not a field
+	field_176273_b cannot be resolved or is not a field
+	The method func_176734_d() is undefined for the type EnumFacing
+	The method func_82601_c() is undefined for the type EnumFacing
+	The method func_82599_e() is undefined for the type EnumFacing
+	field_150375_by cannot be resolved or is not a field
+	field_176501_a cannot be resolved or is not a field
+	field_185512_D cannot be resolved or is not a field
+	field_150395_bd cannot be resolved or is not a field
+	The method func_177977_b() is undefined for the type BlockPos
+	The method func_180495_p(BlockPos) is undefined for the type World
+	field_151579_a cannot be resolved or is not a field
+	The method func_177977_b() is undefined for the type BlockPos
+
+[15:39:30] [Client thread/INFO]: [STDERR]: 	at net.minecraft.world.gen.feature.WorldGenTrees.<init>(WorldGenTrees.java:20)
+[15:39:30] [Client thread/INFO]: [STDERR]: 	at net.minecraft.world.biome.Biome.<clinit>(Biome.java:68)
+[15:39:30] [Client thread/INFO]: [STDERR]: 	at net.minecraft.init.Bootstrap.register(Bootstrap.java:508)
+[15:39:30] [Client thread/INFO]: [STDERR]: 	at net.minecraft.client.Minecraft.<init>(Minecraft.java:439)
+[15:39:30] [Client thread/INFO]: [STDERR]: 	at net.minecraft.client.main.Main.main(Main.java:115)
+[15:39:30] [Client thread/INFO]: [STDERR]: 	at Start.main(Start.java:16)
